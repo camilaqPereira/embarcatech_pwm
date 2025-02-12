@@ -59,7 +59,7 @@ uint pwm_setup(){
     pwm_set_wrap(slice, PWM_wrap);
     pwm_set_gpio_level(GPIO_SERVOMOTOR, PWM_active_time[2]);
     
-    pwm_set_enabled(GPIO_SERVOMOTOR, true);
+    pwm_set_enabled(slice, true);
     
     return slice;
 }
