@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Camila Q",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 17.2, "left": 144, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.8", "servo1:GND", "black", [ "h42.26", "v35.15" ] ],
+    [ "pico:3V3", "servo1:V+", "red", [ "h32.66", "v25.45" ] ],
+    [ "pico:GP22", "servo1:PWM", "gold", [ "h42.26", "v-32.25" ] ]
+  ],
+  "dependencies": {}
+}
